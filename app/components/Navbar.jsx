@@ -8,9 +8,13 @@ const NavBar = () => {
         sticky 
         top-0
         w-full
-        bg-slate-200
+        bg-gradient-to-r
+        from-slate-400 to-slate-200
+        m-0
+        p-0
         z-30
         shadow-sm
+        mb-0
         "
       >
         <div className="py-4 border-b-[1px]">
@@ -24,10 +28,7 @@ const NavBar = () => {
                     md:gap-0
                     "
             >
-              <Link
-                href="/"
-                className={` font-bold text-2xl`}
-              >
+              <Link href="/" className={` font-bold text-2xl`}>
                 Unlimited Autos
               </Link>
               <div className="hidden md:block">Search</div>
