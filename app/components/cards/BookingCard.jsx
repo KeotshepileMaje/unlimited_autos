@@ -1,13 +1,14 @@
 "use client";
-
+import { FaRegCalendar } from "react-icons/fa";
+import { MdAccessTime } from "react-icons/md";
 import { useForm } from "react-hook-form";
 import Input from "../form/Input";
 import { useState } from "react";
 import Container from "../Container";
 import Button from "../Button";
-import { AiOutlineGoogle } from "react-icons/ai";
+import InputSimple from "../form/InputSImple";
 
-export default function ActionAreaCard() {
+export default function BookingsCard() {
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -17,90 +18,96 @@ export default function ActionAreaCard() {
 
   return (
     <Container>
-      <div className="p-4">
-        <div className="p-4 border-2 border-indigo-600 rounded-xl ">
+      <div className="mx-auto p-4 border-2 border-indigo-600 rounded-b-xl ">
         <div className="flex flex-col gap-4">
           <div className="w-full flex justify-around gap-4">
             <div className="w-full">
-              <h3>Pick-up & return</h3>
-              <Input
+              <p className="font-bold text-sm">Pick-up & return</p>
+              <InputSimple
                 id="name"
-                label="Name"
+                icon={FaRegCalendar}
                 disabled={isLoading}
                 register={register}
                 errors={errors}
                 required
               />
             </div>
-            <div className="w-full">
-              <h3>Pick-up & return</h3>
-              <Input
+            <p className="w-full flex items-center">
+              + Different return location
+              {/* <p className="font-bold text-sm">Pick-up & return</p>
+              <InputSimple
                 id="name"
                 label="Name"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
                 required
-              />
-            </div>
+              /> */}
+            </p>
           </div>
-          <div className="flex gap-4">
+          <div className="flex justify-between gap-4">
             <div>
-              <h3>Pick-up date</h3>
+              <p className="font-bold text-sm">Pick-up date</p>
               <div className="flex">
-                <Input
-                  id="name"
-                  label="Name"
-                  disabled={isLoading}
-                  register={register}
-                  errors={errors}
-                  required
-                  roundedCorner="rounded-l-xl"
-                />
-                <Input
-                  id="name"
-                  label="Name"
-                  disabled={isLoading}
-                  register={register}
-                  errors={errors}
-                  required
-                  roundedCorner="rounded-r-xl"
-                />
+                <div className="basis-2/3">
+                  <InputSimple
+                    id="name"
+                    icon={FaRegCalendar}
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    required
+                    roundedCorner="rounded-l-xl"
+                  />
+                </div>
+                <div className="basis-1/3">
+                  <InputSimple
+                    id="name"
+                    icon={MdAccessTime}
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    required
+                    roundedCorner="rounded-r-xl"
+                  />
+                </div>
               </div>
             </div>
             <div>
-              <h3>Return date</h3>
+              <p className="font-bold text-sm">Return date</p>
               <div className="flex">
-                <Input
-                  id="name"
-                  label="Name"
-                  disabled={isLoading}
-                  register={register}
-                  errors={errors}
-                  required
-                  roundedCorner="rounded-l-xl"
-                />
-                <Input
-                  id="name"
-                  label="Name"
-                  disabled={isLoading}
-                  register={register}
-                  errors={errors}
-                  required
-                  roundedCorner="rounded-r-xl"
-                />
+                <div className="basis-2/3">
+                  <InputSimple
+                    id="name"
+                    icon={FaRegCalendar}
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    required
+                    roundedCorner="rounded-l-xl"
+                  />
+                </div>
+                <div className="basis-1/3">
+                  <InputSimple
+                    id="name"
+                    icon={MdAccessTime}
+                    disabled={isLoading}
+                    register={register}
+                    errors={errors}
+                    required
+                    roundedCorner="rounded-r-xl"
+                  />
+                </div>
               </div>
             </div>
-            <div className="  flex flex-grow ">
+            <div className="min-w-[200px] flex flex-grow">
               <div className="self-end w-full">
-                <Button outline label="Show cars" onClick={() => {}} />
+                <Button label="Show cars" onClick={() => {}} />
               </div>
             </div>
           </div>
         </div>
       </div>
-      </div>
-      
     </Container>
   );
 }
