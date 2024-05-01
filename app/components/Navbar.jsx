@@ -12,7 +12,7 @@ const NavBar = () => {
         from-slate-400 to-slate-200
         m-0
         p-0
-        z-30
+        z-50
         shadow-sm
         mb-0
         "
