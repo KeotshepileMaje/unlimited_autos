@@ -1,5 +1,13 @@
 "use client";
 
+import React from "react";
+import { useCallback, useState } from "react";
+import Item from "../Item";
+import Backdrop from "../Backdrop";
+import Calendar from "../Calendar";
+import OpeningTimes from '../OpeningTimes'
+import Button from "../Button";
+
 const InputSimple = ({
   id,
   icon: Icon,
@@ -8,12 +16,21 @@ const InputSimple = ({
   required,
   register,
   errors,
+  children,
+  value,
   roundedCorner = "rounded-xl",
 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOpen = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, [isOpen]);
+
   return (
     <div className="w-full relative">
       <div className="relative">
         <input
+          value={value}
+          onFocus={toggleOpen}
           autoComplete="off"
           id={id}
           disabled={disabled}
@@ -21,6 +38,7 @@ const InputSimple = ({
           placeholder=""
           type={type}
           className={`
+          z-30 
             peer
             w-full
             p-3 pl-12
@@ -50,7 +68,33 @@ const InputSimple = ({
         >
           {Icon && <Icon size={24} />}
         </label>
+
+        {isOpen && (
+          <div
+            className="
+            z-30
+            absolute left-0 mt-2 w-full
+            min-w-[400px]
+            rounded-xl
+            shadow-md
+            bg-white
+            overflow-hidden
+            right-0
+            text-sm
+            flex
+            flex-col
+            cursor-pointer
+            "
+          >
+            <div className="m-4 sticky">
+              <Button outline onClick={toggleOpen} label='Close'/>
+            </div>
+
+            {children}
+          </div>
+        )}
       </div>
+      {isOpen ? <Backdrop onClick={toggleOpen} /> : null}
     </div>
   );
 };
