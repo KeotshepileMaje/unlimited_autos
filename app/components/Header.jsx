@@ -14,7 +14,7 @@ const Header = () => {
               <div className="text-lg md:text-xl text-white md-2">
                 BEST SERVICE
               </div>
-              <p className="text-2xl md:text-5xl text-yellow-400 font-bold">
+              <p className="text-2xl md:text-5xl text-merigold-100 font-bold">
                 BEST PRICES
               </p>
             </div>

@@ -12,7 +12,7 @@ import Carousel from "./carousel/Carousel";
 
 const AboutUs = () => {
   return (
-    <div className="p-6 bg-merigold min-h-[60vh] flex justify-center items-center">
+    <div className="p-6 bg-merigold-100 min-h-[60vh] flex justify-center items-center">
       <Container>
         <div className="m-auto p-4 border-4 rounded-xl">
           <div>

@@ -44,7 +44,7 @@ export default function BookingsCard() {
 
   return (
     <Container>
-      <div className="mx-auto p-4 border-l-2 border-r-2 border-b-2 border-merigold rounded-b-xl ">
+      <div className="mx-auto p-4 border-l-2 border-r-2 border-b-2 border-merigold-100 rounded-b-xl ">
         <div className="flex flex-col gap-4">
           <div className="w-full flex justify-around gap-4">
             <div className="w-full">
@@ -78,7 +78,7 @@ export default function BookingsCard() {
               {!differentReturnLocation ? (
                 <p
                   onClick={() => setDifferentReturnLocation(true)}
-                  className="w-[250px] text-center hover:text-merigold cursor-pointer"
+                  className="w-[250px] text-center hover:text-merigold-100 cursor-pointer"
                 >
                   + Different return location
                 </p>

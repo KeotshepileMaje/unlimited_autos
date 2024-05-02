@@ -25,10 +25,25 @@ module.exports = {
       indigo: colors.indigo,
       yellow: colors.yellow,
       slate: colors.slate,
-      merigold: "#FCAE1E",
       hazelWood: "#bdb7ac",
-      navy: '#0a1172'
+      merigold: {
+        100: "#FCAE1E",
+        200: "#FFAD4A",
+        300: "#BF8237",
+        400: "#805725",
+        500: "#402B12",
+      },
+      navy: {
+        100: '#3D5AFF',
+        100:'#2237B3',
+      }
     },
   },
   plugins: [],
 };
+
+
+// emerald: {
+//         100: "#57FFDB",
+//         200: "#46B39B",
+//       },

@@ -127,14 +127,14 @@ export default function Calendar({ registeredId, handleOptionClick }) {
                         isEqual(day.date, selectedDay) &&
                           !isEqual(day.date, today) &&
                           !isPast(day.date) &&
-                          "bg-merigold",
+                          "bg-merigold-100",
                         !isEqual(day.date, selectedDay) && "hover:bg-gray-200",
                         (isEqual(day.date, selectedDay) ||
                           isEqual(day.date, today)) &&
                           "font-semibold",
                         "mx-auto flex h-8 w-8 items-center justify-center rounded-full",
                         // Add class to highlight today's date
-                        isEqual(day.date, today) && "bg-emerald-600"
+                        isEqual(day.date, today) && "bg-emerald-200"
                       )}
                     >
                       <time dateTime={day.date}>{format(day.date, "d")}</time>

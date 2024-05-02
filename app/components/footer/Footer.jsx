@@ -4,9 +4,9 @@ import FooterList from "./FooterList";
 
 const Footer = () => {
   return (
-    <div className="p-4">
+    <div className="p-4 bg-emerald-900 text-white border-t-4 border-merigold-100">
       <Container>
-        <div className=" border-2 border-t-8 border-violet-800 p-4">
+        <div className="p-4">
           <div className="flex justify-between">
             <FooterList>
               <h3>About</h3>
@@ -46,7 +46,7 @@ const Footer = () => {
             <div>|</div>
             <div>Privacy & Safety</div>
           </div>
-          <div className="w-fit border-t-8 border-violet-800 -pt-4">
+          <div className="w-fit border-t-4 border-merigold-100  pt-2 mt-2">
             &copy; Unlimited Autos 2024
           </div>
         </div>

@@ -9,7 +9,8 @@ const NavBar = () => {
         top-0
         w-full
         bg-gradient-to-r
-        from-slate-400 to-slate-200
+        bg-emerald-900
+        text-white
         m-0
         p-0
         z-50
