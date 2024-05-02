@@ -6,9 +6,7 @@ import Heading from "./Heading";
 import List from "./List";
 import { BiSolidBusiness } from "react-icons/bi";
 import { MdGroups2 } from "react-icons/md";
-import BackgroundCarousel from "./carousel/BackgroundCarousel";
 import Button from "./Button";
-import Carousel from "./carousel/Carousel";
 
 const AboutUs = () => {
   return (

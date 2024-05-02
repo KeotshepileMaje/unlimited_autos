@@ -5,7 +5,6 @@ import Container from "../Container";
 import { truncateText } from "@/utils/trancate";
 import Testimony from "./Testimony";
 import Heading from "../Heading";
-import Carousel from "../carousel/Carousel";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
