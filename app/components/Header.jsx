@@ -5,9 +5,9 @@ import BackgroundCarousel from "./carousel/BackgroundCarousel";
 const Header = () => {
     return (
       <div>
-        <div className="border-b-2 border-merigold">
+        <div className="border-b-4 border-merigold-100">
           <BackgroundCarousel>
-            <div className="bg-slate-200 mb-8 md:mb-0 text-center">
+            <div className=" mb-8 md:mb-0 text-center">
               <h1 className="text-4xl md:text-6xl text-white mb-4">
                 DRIVE WITH THE BEST
               </h1>
@@ -20,7 +20,6 @@ const Header = () => {
             </div>
           </BackgroundCarousel>
         </div>
-
         <Container>
           <div className="h-[30vh] px-4">
             <BookingsCard />

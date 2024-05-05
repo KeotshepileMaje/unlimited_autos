@@ -10,13 +10,13 @@ import Button from "./Button";
 
 const AboutUs = () => {
   return (
-    <div className="p-6 bg-merigold-100 min-h-[60vh] flex justify-center items-center">
+    <div className="p-6 bg-merigold-100 min-h-[80vh] flex justify-center items-center">
       <Container>
-        <div className="m-auto p-4 border-4 rounded-xl">
+        <div className="m-auto p-4">
           <div>
             <Heading title="Unlimited Auto Rentals" />
             <div className="flex">
-              <div className="basis-2/3">
+              <div className="px-4 basis-2/3">
                 <h3 className="font-bold">
                   Versatile Luxury Car Rental for Every Occasion
                 </h3>
@@ -79,7 +79,7 @@ const AboutUs = () => {
                 </div>
               </div>
               <div className="basis-1/3 group">
-                <div className="relative flex justify-center w-full h-full overflow-hidden border-4 rounded-xl">
+                <div className="relative flex justify-center w-full h-full overflow-hidden border-4 border-emerald-950  rounded-xl">
                   <Image
                     src="/cars-for-rent/memories.png"
                     alt=""

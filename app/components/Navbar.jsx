@@ -9,7 +9,7 @@ const NavBar = () => {
         top-0
         w-full
         bg-gradient-to-r
-        bg-emerald-900
+        bg-emerald-950
         text-white
         m-0
         p-0
@@ -18,7 +18,7 @@ const NavBar = () => {
         mb-0
         "
       >
-        <div className="py-4 border-b-[1px]">
+        <div className="py-4">
           <Container>
             <div
               className="

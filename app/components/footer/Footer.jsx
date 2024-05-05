@@ -4,7 +4,7 @@ import FooterList from "./FooterList";
 
 const Footer = () => {
   return (
-    <div className="p-4 bg-emerald-900 text-white border-t-4 border-merigold-100">
+    <div className="p-4 bg-emerald-950 text-white">
       <Container>
         <div className="p-4">
           <div className="flex justify-between">
