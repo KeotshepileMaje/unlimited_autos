@@ -1,21 +1,38 @@
-import Testimonials from "./components/testimonials/Testimonials";
+"use client"
+
+import { useEffect } from "react";
+import AOS from 'aos'
+import "aos/dist/aos.css"
+import Testimonials from "./components/Testimonials";
 import CarsList from "./components/CarsList";
 import AboutUs from "./components/AboutUs";
-import BackgroundCarousel from "./components/carousel/BackgroundCarousel";
 import Header from "./components/Header";
 import GoogleMaps from "./components/GoogleMaps";
 import BrandLogos from "./components/BrandLogos";
+import Services from "./components/Services";
+import LayoutGrid from "./components/LayoutGrid";
 
 export default function Home() {
-  return (
-    <div>
 
-      
+  useEffect(() => {
+    AOS.init({
+      offset: 50,
+      duration: 500,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+
+  return (
+    <div className="bg-gray-100">
       <Header />
-      <BrandLogos />
+      {/* <BrandLogos /> */}
       <main>
+        <Services />
         <AboutUs />
-        <CarsList />
+        <LayoutGrid />
+        {/* <CarsList /> */}
         <Testimonials />
         <section className="mx-auto">
           <div
@@ -30,7 +47,6 @@ export default function Home() {
         </section>
         <GoogleMaps />
       </main>
-
     </div>
   );
 }
