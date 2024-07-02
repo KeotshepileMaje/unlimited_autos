@@ -2,9 +2,9 @@ import Link from "next/link";
 import Container from "./Container";
 
 const NavBar = () => {
-    return (
-      <div
-        className="
+  return (
+    <div
+      className="
         sticky 
         top-0
         w-full
@@ -17,38 +17,37 @@ const NavBar = () => {
         shadow-sm
         mb-0
         "
-      >
-        <div className="py-4">
-          <Container>
+    >
+      <div className="py-4">
+        <Container>
+          <div
+            className="
+              flex
+              items-center
+              justify-between
+              gap-3
+              md:gap-0
+              "
+          >
+            <Link href="/" className={` font-bold text-2xl`}>
+              Unlimited Autos
+            </Link>
             <div
-              className="
-                    flex
-                    items-center
-                    justify-between
-                    gap-3
-                    md:gap-0
-                    "
+              className=" 
+                flex 
+                items-center 
+                gap-8 
+                md-gap-12
+                "
             >
-              <Link href="/" className={` font-bold text-2xl`}>
-                Unlimited Autos
-              </Link>
-              <div className="hidden md:block">Search</div>
-              <div
-                className=" 
-                        flex 
-                        items-center 
-                        gap-8 
-                        md-gap-12
-                        "
-              >
-                <div>Okay</div>
-                <div>Okay</div>
-              </div>
+              <div>View Cars</div>
+              <div>Login</div>
             </div>
-          </Container>
-        </div>
+          </div>
+        </Container>
       </div>
-    );
-}
+    </div>
+  );
+};
 
 export default NavBar;
